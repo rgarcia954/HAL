@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration xmlns:xs="http:/www.w3.org/2001/XMLSchema-instance">
+  <device Dclock="48000000" Dcore="Cortex-M33" DcoreVersion="r0p4" Dendian="Little-endian" Dfamily="Montana Series" Dfpu="SP_FPU" Dmpu="MPU" Dname="Montana" Dvendor="ONSemiconductor:141" Pname="">
+    <url>http:/www.onsemi.com</url>
+    <package info="ON Semiconductor Montana Device Pack" name="Montana" url="www.onsemi.com" vendor="ONSemiconductor" version="1.1.117" versionMatchMode="fixed"/>
+  </device>
+  <toolchain Tcompiler="GCC" Toutput="exe"/>
+  <apis/>
+  <components/>
+  <packages useAllLatestPacks="0">
+    <package name="Montana" url="www.onsemi.com" vendor="ONSemiconductor" version="1.1.117" versionMatchMode="fixed"/>
+  </packages>
+</configuration>

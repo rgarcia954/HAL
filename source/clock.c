@@ -71,8 +71,11 @@ void Sys_Clocks_DividerConfig(uint32_t uartclk_freq, uint32_t sensorclk_freq,
                      (bbclk_div << CLK_DIV_CFG0_BBCLK_PRESCALE_Pos) |
                      (uartclk_div << CLK_DIV_CFG0_UARTCLK_PRESCALE_Pos));
 
-    dcclk_div = (SystemCoreClock / 4000000);
-    if (SystemCoreClock % 4000000 == 0)
+    // DCDC Clock frequency s/b at 12 MHz when VBAT=3V
+    // Refer to Table 29 in PTS
+    // Note that this code only works if SYSCLK (SystemCoreClock) = 48 MHz, 24 MHz or 12 MHz
+    dcclk_div = (SystemCoreClock / 12000000);
+    if (SystemCoreClock % 12000000 == 0)
     {
         dcclk_div = dcclk_div - 1;
     }
